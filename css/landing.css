@@ -100,10 +100,12 @@ body {
 footer {
     /* Positioning */
     display: block;
-    text-align: center;
     margin-top: 15vh;
+}
 
-    /* Font */
+footer p {
+    /* Font styling */
+    text-align: center;
     font-family: 'Dosis', sans-serif;
     color: hsl(0, 55%, 46%);
     opacity: 0.8;
