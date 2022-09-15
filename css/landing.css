@@ -64,7 +64,7 @@ body {
     /* Centered */
     display: block;
     margin: 0 auto;
-    padding-top: 25vh;
+    padding-top: 15vh;
 }
 
 /* Navigation menu */
@@ -88,4 +88,23 @@ body {
     background-color: #fec582;
     border: 0.1vh solid #b53434;
     border-radius: 0.3vh;
+
+    /* Font */
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    color: #b53434;
+}
+
+/* Footer */
+
+footer {
+    /* Positioning */
+    display: block;
+    text-align: center;
+    margin-top: 15vh;
+
+    /* Font */
+    font-family: 'Dosis', sans-serif;
+    color: #b53434;
+    opacity: 0.8;
 }
