@@ -153,7 +153,7 @@ body {
     margin: 0 auto;
 
     /* Animation */
-    animation: spaceout 1s linear paused forwards;
+    animation: spaceout 1s ease-out paused forwards;
 
     /* Temporary */
     border: solid;
