@@ -168,8 +168,9 @@ body {
 
 footer {
     /* Positioning */
-    display: block;
-    margin-top: 15vh;
+    position: absolute;
+    bottom: 1vh;
+    left: 48.5vw;
 }
 
 footer p {
