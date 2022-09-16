@@ -62,7 +62,7 @@ body {
 @keyframes shrinkup {
     from {
         max-height: 50vh;
-        padding-top: 15vh;
+        padding-top: 20vh;
     }
 
     to {
@@ -78,7 +78,7 @@ body {
     /* Centered */
     display: block;
     margin: 0 auto;
-    padding-top: 15vh;
+    padding-top: 20vh;
 
     /* Animation */
     animation: shrinkup 1s ease-out paused forwards;
@@ -143,26 +143,21 @@ body {
 
 /* Main content */
 
-.hidden {
+.wrapper {
     /* Dimensions */
-    max-width: 1440px;
-    visibility: hidden;
-
-    /* Positioning */
-    display: block;
-    position: absolute;
+    height: 0vh;
 
     /* Animation */
-
+    animation: spaceout 1s linear paused forwards;
 }
 
-@keyframes fade-in-out {
-    0% {
-        visibility: hidden;
+@keyframes spaceout {
+    from {
+        height: 0vh;
     }
 
-    100% {
-        visibility: visible;
+    to {
+        height: 50vh;
     }
 }
 
