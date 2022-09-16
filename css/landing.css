@@ -77,9 +77,6 @@ body {
     display: block;
     margin: 0 auto;
     padding-top: 15vh;
-
-    animation: shrinkup 2s ease-in-out 2s 1;
-    animation-fill-mode: forwards;
 }
 
 /* Navigation menu */
