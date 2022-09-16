@@ -1,36 +1,41 @@
-// Store clicks
-var lastClick;
-var click;
+// Init memory variables
+let lastClick = undefined;
+let logoDown = true;
+let played = false
 
-// Array of nav menu anchors
-const anchors = document.querySelectorAll('.nav-item a');
+// Get elements to animate
+const logoAnimation = document.getElementById('top-logo').getAnimations()[0]
+const menuAnimation = document.getElementById('menu').getAnimations()[0]
 
-// If you click one of the anchors
-anchors.forEach(element => {
-    element.addEventListener('click', () => {
-        // Check where was last click
-        switch (lastClick) {
-            case undefined:
-                // Store click
-                click = element.id
+// If you click one of the menu anchors
+const anchors = document.querySelectorAll('.nav-item a')
+anchors.forEach(anchor => {
+    anchor.addEventListener('click', () => {          
+        if (logoDown) {
+            if (!(played)) {
 
-                // Get and transform relevant article
-                console.log(click + '-article')
-                const article = document.getElementById(click + '-article')
+                logoAnimation.play()
+                menuAnimation.play()
+                logoDown = false
+                played = true
+                lastClick = anchor.id
 
-                article.style.animation = ''
-            case 'products':
+            } else if ((played) && (anchor.id != lastClick)) {
+                
+                logoAnimation.reverse()
+                menuAnimation.reverse()
+                logoDown = false
+                lastClick = anchor.id
 
-            case 'contact':
+            }
 
-            case 'about':
+        } else if ((anchor.id == 'home') && (played)) {
+
+            logoAnimation.reverse()
+            menuAnimation.reverse()
+            logoDown = true
+            lastClick = anchor.id
 
         }
-
-        // Get and transform logo element
-        const logo = document.getElementById('top-logo')
-
-        logo.style.animation = 'shrinkup 2s ease-in-out'
-        logo.style.animationFillMode = 'forwards'
     })
-});
+})
