@@ -9,6 +9,21 @@ const menuAnimation = document.getElementById('menu').getAnimations()[0]
 const spaceOutAnimation = document.getElementById('wrapper').getAnimations()[0]
 const fadeInAnimation = document.getElementById('wrapper').getAnimations()[1]
 
+// Animation functions
+function reverseAnimation() {
+    logoAnimation.reverse()
+    menuAnimation.reverse()
+    spaceOutAnimation.reverse()
+    fadeInAnimation.reverse()
+}
+
+function playAnimation() {
+    logoAnimation.play()
+    menuAnimation.play()
+    spaceOutAnimation.play()
+    fadeInAnimation.play()
+}
+
 // If you click one of the menu anchors
 const anchors = document.querySelectorAll('.nav-item a')
 anchors.forEach(anchor => {
@@ -16,22 +31,14 @@ anchors.forEach(anchor => {
         if (logoDown) {
             if (!(played) && (anchor.id != 'home')) { // Open to article
 
-                logoAnimation.play()
-                menuAnimation.play()
-                spaceOutAnimation.play()
-                fadeInAnimation.play()
-
+                playAnimation()
                 logoDown = false
                 played = true
                 lastClick = anchor.id
 
-            } else if ((played) && (anchor.id != lastClick)) { // Change article
+            } else if ((played) && (anchor.id != lastClick)) { // Change article (or return from home)
                 
-                logoAnimation.reverse()
-                menuAnimation.reverse()
-                spaceOutAnimation.reverse()
-                fadeInAnimation.reverse()
-
+                reverseAnimation()
                 logoDown = false
                 lastClick = anchor.id
 
@@ -39,11 +46,7 @@ anchors.forEach(anchor => {
 
         } else if ((anchor.id == 'home') && (played)) { // Back to home
 
-            logoAnimation.reverse()
-            menuAnimation.reverse()
-            spaceOutAnimation.reverse()
-            fadeInAnimation.reverse()
-
+            reverseAnimation()
             logoDown = true
             lastClick = anchor.id
 
