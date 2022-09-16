@@ -52,7 +52,9 @@ table {
 
 body {
     background-color: hsl(42, 100%, 84%);
+    max-height: 100vh;
     height: 100vh;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -143,9 +145,10 @@ body {
 
 /* Main content */
 
-.wrapper {
+#wrapper {
     /* Dimensions */
     height: 0vh;
+    overflow: hidden;
 
     /* Animation */
     animation: spaceout 1s linear paused forwards;
@@ -157,7 +160,7 @@ body {
     }
 
     to {
-        height: 50vh;
+        height: 55vh;
     }
 }
 
