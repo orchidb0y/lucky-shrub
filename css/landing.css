@@ -149,9 +149,14 @@ body {
     /* Dimensions */
     height: 0vh;
     overflow: hidden;
+    max-width: 75vw;
+    margin: 0 auto;
 
     /* Animation */
     animation: spaceout 1s linear paused forwards;
+
+    /* Temporary */
+    border: solid;
 }
 
 @keyframes spaceout {
