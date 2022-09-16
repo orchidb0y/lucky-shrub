@@ -157,9 +157,6 @@ body {
 
     /* Animation */
     animation: spaceout 1s ease-out paused forwards, fadein 1s ease-out 1s paused forwards;
-
-    /* Temporary */
-
 }
 
 @keyframes spaceout {
@@ -178,6 +175,28 @@ body {
     }
 
     100% {
+        opacity: 1;
+    }
+}
+
+.page-article {
+    /* Dimensions and positioning */
+    max-width: 75vw;
+    position: absolute;
+
+    /* Opacity */
+    opacity: 0;
+
+    /* Animation */
+
+}
+
+@keyframes showarticle {
+    from {
+        opacity: 0;
+    }
+
+    to {
         opacity: 1;
     }
 }
