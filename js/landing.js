@@ -12,7 +12,7 @@ const anchors = document.querySelectorAll('.nav-item a')
 anchors.forEach(anchor => {
     anchor.addEventListener('click', () => {          
         if (logoDown) {
-            if (!(played)) {
+            if (!(played) && (anchor.id != 'home')) {
 
                 logoAnimation.play()
                 menuAnimation.play()
