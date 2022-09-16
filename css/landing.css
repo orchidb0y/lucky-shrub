@@ -53,6 +53,8 @@ table {
 body {
     background-color: hsl(42, 100%, 84%);
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Logo */
