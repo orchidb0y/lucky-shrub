@@ -87,10 +87,12 @@ body {
 @keyframes slideup {
     from {
         margin-top: 5vh;
+        column-gap: 5vh;
     }
 
     to {
         margin-top: 2vh;
+        column-gap: 2vh;
     }
 }
 
