@@ -77,19 +77,33 @@ body {
     display: block;
     margin: 0 auto;
     padding-top: 15vh;
+
+    /* Animation */
+    animation: shrinkup 1s ease-out paused forwards;
 }
 
 /* Navigation menu */
 
+@keyframes slideup {
+    from {
+
+    }
+}
+
 #nav-menu menu {
     /* Positioning */
-    margin: 5vh 0;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
     column-gap: 5vh;
     justify-content: center;
 
     /* Menu display */
     display: flex;
     list-style: none;
+
+    /* Animation */
+    animation: slideup 1s ease-out paused forwards;
 }
 
 .nav-item {
@@ -129,6 +143,19 @@ body {
     /* Positioning */
     display: block;
     position: absolute;
+
+    /* Animation */
+
+}
+
+@keyframes fade-in-out {
+    0% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
 }
 
 /* Footer */
