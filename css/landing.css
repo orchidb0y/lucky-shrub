@@ -152,11 +152,14 @@ body {
     max-width: 75vw;
     margin: 0 auto;
 
+    /* Animation setup */
+    opacity: 0;
+
     /* Animation */
-    animation: spaceout 1s ease-out paused forwards;
+    animation: spaceout 1s ease-out paused forwards, fadein 1s ease-out 1s paused forwards;
 
     /* Temporary */
-    border: solid;
+
 }
 
 @keyframes spaceout {
@@ -166,6 +169,36 @@ body {
 
     to {
         height: 55vh;
+    }
+}
+
+@keyframes spacein {
+    from {
+        height: 55vh;
+    }
+
+    to {
+        height: 0vh;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
