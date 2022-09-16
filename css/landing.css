@@ -84,7 +84,7 @@ body {
 
 /* Navigation menu */
 
-#nav-menu ul {
+#nav-menu menu {
     /* Positioning */
     margin: 5vh 0;
     column-gap: 5vh;
@@ -92,6 +92,7 @@ body {
 
     /* Menu display */
     display: flex;
+    list-style: none;
 }
 
 .nav-item {
