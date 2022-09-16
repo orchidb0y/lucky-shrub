@@ -86,7 +86,11 @@ body {
 
 @keyframes slideup {
     from {
+        margin-top: 5vh;
+    }
 
+    to {
+        margin-top: 2vh;
     }
 }
 
