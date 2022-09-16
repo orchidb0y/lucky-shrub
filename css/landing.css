@@ -57,6 +57,18 @@ body {
 
 /* Logo */
 
+@keyframes shrinkup {
+    from {
+        max-height: 50vh;
+        padding-top: 15vh;
+    }
+
+    to {
+        max-height: 15vh;
+        padding-top: 3vh;
+    }
+}
+
 #top-logo {
     /* Size */
     max-height: 50vh;
@@ -65,11 +77,14 @@ body {
     display: block;
     margin: 0 auto;
     padding-top: 15vh;
+
+    animation: shrinkup 2s ease-in-out 2s 1;
+    animation-fill-mode: forwards;
 }
 
 /* Navigation menu */
 
-#nav-menu {
+#nav-menu ul {
     /* Positioning */
     margin: 5vh 0;
     column-gap: 5vh;
@@ -104,6 +119,18 @@ body {
     /* Hover transformation */
     background-color: hsl(32, 57%, 64%);
     outline: 0.2vh solid hsl(0, 55%, 46%);
+}
+
+/* Main content */
+
+.hidden {
+    /* Dimensions */
+    max-width: 1440px;
+    visibility: hidden;
+
+    /* Positioning */
+    display: block;
+    position: absolute;
 }
 
 /* Footer */
