@@ -186,9 +186,11 @@ body {
 
     /* Opacity */
     opacity: 0;
+}
 
+#products-article {
     /* Animation */
-
+    animation: showarticle 0.5s ease-out paused forwards;
 }
 
 @keyframes showarticle {
