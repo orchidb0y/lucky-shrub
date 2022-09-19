@@ -171,7 +171,7 @@ body {
     /* Display */
     display: flex;
     flex-direction: column;
-    vertical-align: middle;
+    justify-content: center;
 }
 
 #text-area p, h1 {
