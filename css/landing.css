@@ -182,6 +182,7 @@ body {
 
     /* Font */
     font-family: 'Dosis';
+    font-size: 2vh;
 }
 
 #text-area h1 {
@@ -191,9 +192,10 @@ body {
     color: red;
 }
 
-#text-area p {
+#text {
     /* Font */
-    font-size: 2vh;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
 }
 
 #portfolio {
