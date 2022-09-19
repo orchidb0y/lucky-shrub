@@ -283,10 +283,10 @@ body {
 /* Footer */
 
 footer {
-    /* Positioning */
-    position: absolute;
-    bottom: 1vh;
-    left: 48.5vw;
+    /* Display */
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100px 100px;
 }
 
 footer p {
@@ -295,4 +295,16 @@ footer p {
     font-family: 'Dosis', sans-serif;
     color: hsl(0, 55%, 46%);
     opacity: 0.8;
+
+    /* Positioning */
+    line-height: 100px;
+}
+
+footer img {
+    /* Dimensions */
+    max-width: 50px;
+    
+    /* Positioning */
+    margin-left: 25%;
+    margin-right: 25%;
 }
