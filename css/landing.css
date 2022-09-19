@@ -52,9 +52,6 @@ table {
 
 body {
     background-color: hsl(42, 100%, 84%);
-    max-height: 100vh;
-    height: 100vh;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -134,6 +131,7 @@ body {
     max-width: 1080px;
     margin: 0 auto;
     height: 55vh;
+    justify-content: center;
 }
 
 #products-article {
@@ -144,6 +142,7 @@ body {
     /* Positioning and dimensions */
     position: absolute;
     max-width: 1080px;
+    width: 100vw;
 
 
     /* Display */
@@ -207,6 +206,24 @@ body {
     column-gap: 3vh;
 }
 
+@media only screen and (max-width: 1079px) {
+    main {
+        overflow: hidden;
+    }
+    
+    #portfolio {
+        max-width: calc(20vh + 4rem);
+        flex-direction: column;
+        flex-basis: 55vh;
+        row-gap: 1rem;
+        margin: 0 auto;
+    }
+
+    .project {
+        max-width: calc(20vh + 4rem);
+    }
+}
+
 .project {
     border: 1px solid;
     font-size: 12px;
@@ -237,7 +254,7 @@ body {
     /* Positioning and dimensions */
     position: absolute;
     max-width: 1080px;
-    width: 1080px;
+    width: 100vw;
 
     /* Display */
     display: flex;
@@ -266,7 +283,13 @@ body {
 }
 
 #about-article p {
+    /* Font */
     font-family: 'Dosis';
+    text-justify: distribute;
+
+    /* Dimensions */
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 #about-article p ~ p {
@@ -288,27 +311,23 @@ body {
 
 footer {
     /* Display */
-    display: grid;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    grid-template-columns: 100px 100px;
-}
-
-footer p {
-    /* Font styling */
-    text-align: center;
-    font-family: 'Dosis', sans-serif;
-    color: hsl(0, 55%, 46%);
-    opacity: 0.8;
-
-    /* Positioning */
-    line-height: 100px;
 }
 
 footer img {
     /* Dimensions */
     max-width: 50px;
-    
-    /* Positioning */
-    margin-left: 25%;
-    margin-right: 25%;
+    margin: 0 25px;
+}
+
+footer p {
+    /* Font */
+    font-family: 'Dosis';
+    text-align: center;
+    line-height: 100px;
+
+    /* Dimensions */
+    width: 100px;
 }
