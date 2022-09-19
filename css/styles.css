@@ -103,7 +103,7 @@ body {
     /* Box styling */
     background-color: hsl(32, 98%, 75%);
     outline: 0.1vh solid hsl(0, 55%, 46%);
-    border-radius: 0.3vh;
+    border-radius: 30px;
 
     /* Transition */
     transition: all 0.1s ease-out;
@@ -189,7 +189,7 @@ body {
     /* Font */
     font-weight: 700;
     font-size: 3vh;
-    color: red;
+    color: hsl(0, 55%, 46%);
 }
 
 #text {
@@ -228,6 +228,7 @@ body {
 
 .project {
     border: 1px solid;
+    border-radius: 30px;
     font-size: 12px;
 }
 
@@ -240,6 +241,10 @@ body {
     max-width: 20vh;
     margin: 2rem;
     margin-bottom: 0 !important;
+
+    /* Border */
+    border: 1px solid hsla(0, 0, 0, 0);
+    border-radius: 30px;
 }
 
 .project p {
