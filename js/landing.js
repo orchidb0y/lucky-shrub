@@ -1,55 +1,79 @@
-// Init memory variables
-let lastClick = undefined;
-let logoDown = true;
-let played = false
+//Memory object
+const memory = {
+    lastPage: 'products',
+    productsAnimation: document.getElementById('products-article').getAnimations()[0],
+    contactAnimation: document.getElementById('contact-article').getAnimations()[0],
+    aboutAnimation: document.getElementById('about-article').getAnimations()[0]
 
-// Get elements to animate
-const logoAnimation = document.getElementById('top-logo').getAnimations()[0]
-const menuAnimation = document.getElementById('menu').getAnimations()[0]
-const spaceOutAnimation = document.getElementById('wrapper').getAnimations()[0]
-const fadeInAnimation = document.getElementById('wrapper').getAnimations()[1]
-
-// Animation functions
-function reverseAnimation() {
-    logoAnimation.reverse()
-    menuAnimation.reverse()
-    spaceOutAnimation.reverse()
-    fadeInAnimation.reverse()
 }
 
-function playAnimation() {
-    logoAnimation.play()
-    menuAnimation.play()
-    spaceOutAnimation.play()
-    fadeInAnimation.play()
+// Helper functions
+function originDestination(anchor) {
+
+    let origin = memory.lastPage
+    let destination = anchor.id
+    let animate = false
+
+    if (destination == 'home') {
+        destination = 'products'
+    }
+
+    if (destination == origin) {
+        return [origin, destination, animate]
+    } else {
+        animate = true
+        memory.lastPage = destination
+        return [origin, destination, animate]
+    }
+
 }
 
-// If you click one of the menu anchors
+function getAnimation(page) {
+    page = page + 'Animation'
+    return memory[page]
+}
+
+function playAnimation(animation) {
+
+    if (animation.playState == 'paused') {
+        animation.play()
+    } else if (animation.playState == 'finished') {
+        animation.reverse()
+    }
+
+}
+
+function delay(time) {
+    return new Promise(resolve => setTimeout(resolve, time))
+}
+
+// Animation function
 const anchors = document.querySelectorAll('.nav-item a')
 anchors.forEach(anchor => {
-    anchor.addEventListener('click', () => {          
-        if (logoDown) {
-            if (!(played) && (anchor.id != 'home')) { // Open to article
+    anchor.addEventListener('click', () => {
 
-                playAnimation()
-                logoDown = false
-                played = true
-                lastClick = anchor.id
+        let [origin, destination, animate] = originDestination(anchor)
+        console.log(origin, destination, animate)
 
-            } else if ((played) && (anchor.id != lastClick)) { // Change article (or return from home)
-                
-                reverseAnimation()
-                logoDown = false
-                lastClick = anchor.id
+        if (!(animate)) {
+            return
+        } else {
 
-            }
+            // Get and play current article's animation
+            console.log('Getting outAnimation from', origin + '-article')
+            let outAnimation = getAnimation(origin)
+            console.log('Got', outAnimation)
+            playAnimation(outAnimation)
 
-        } else if ((anchor.id == 'home') && (played)) { // Back to home
-
-            reverseAnimation()
-            logoDown = true
-            lastClick = anchor.id
+            // Get and play new article's animation
+            console.log('Getting inAnimation from', destination + '-article')
+            let inAnimation = getAnimation(destination)
+            console.log('Got', inAnimation)
+            delay(1000).then(() => playAnimation(inAnimation))
 
         }
+
+        console.log('')
+
     })
 })

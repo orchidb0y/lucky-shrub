@@ -61,29 +61,14 @@ body {
 
 /* Logo */
 
-@keyframes shrinkup {
-    from {
-        max-height: 50vh;
-        padding-top: 20vh;
-    }
-
-    to {
-        max-height: 15vh;
-        padding-top: 3vh;
-    }
-}
-
 #top-logo {
     /* Size */
-    max-height: 50vh;
+    max-height: 20vh;
 
     /* Centered */
     display: block;
     margin: 0 auto;
-    padding-top: 20vh;
-
-    /* Animation */
-    animation: shrinkup 1s ease-out paused forwards;
+    padding-top: 3vh;
 }
 
 /* Navigation menu */
@@ -103,17 +88,15 @@ body {
 
 #nav-menu menu {
     /* Positioning */
-    margin: 5vh 0;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
 
-    column-gap: 5vh;
+    column-gap: 2vh;
     justify-content: center;
 
     /* Menu display */
     display: flex;
     list-style: none;
-
-    /* Animation */
-    animation: slideup 1s ease-out paused forwards;
 }
 
 .nav-item {
@@ -147,50 +130,148 @@ body {
 
 #wrapper {
     /* Dimensions */
-    height: 0vh;
-    overflow: hidden;
-    max-width: 75vw;
+    overflow: auto;
+    max-width: 1080px;
     margin: 0 auto;
-
-    /* Animation setup */
-    opacity: 0;
-
-    /* Animation */
-    animation: spaceout 1s ease-out paused forwards, fadein 1s ease-out 1s paused forwards;
-}
-
-@keyframes spaceout {
-    from {
-        height: 0vh;
-    }
-
-    to {
-        height: 55vh;
-    }
-}
-
-@keyframes fadein {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.page-article {
-    /* Dimensions and positioning */
-    max-width: 75vw;
-    position: absolute;
-
-    /* Opacity */
-    opacity: 0;
+    height: 55vh;
 }
 
 #products-article {
     /* Animation */
-    animation: showarticle 0.5s ease-out paused forwards;
+    animation: showarticle 1s ease forwards;
+    opacity: 0;
+
+    /* Positioning and dimensions */
+    position: absolute;
+    max-width: 1080px;
+
+
+    /* Display */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1vh;
+}
+
+#promotion {
+    /* Dimensions */
+    padding: 0.5vh;
+
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#promotion img {
+    /* Dimensions */
+    max-height: 10vh;
+}
+
+#text-area {
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
+#text-area p, h1 {
+    /* Dimensions */
+    max-width: 100%;
+    margin-left: 0.5vh;
+    vertical-align: middle;
+
+    /* Font */
+    font-family: 'Dosis';
+}
+
+#text-area h1 {
+    /* Font */
+    font-weight: 700;
+    font-size: 3vh;
+    color: red;
+}
+
+#text-area p {
+    /* Font */
+    font-size: 2vh;
+}
+
+#portfolio {
+    /* Dimensions */
+    max-width: 100%;
+    
+    /* Flex display */
+    display: flex;
+    justify-content: center;
+    column-gap: 3vh;
+}
+
+.project {
+    border: 1px solid;
+    font-size: 12px;
+}
+
+.project img {
+    /* Dimensions */
+    max-width: 20vh;
+    margin: 2rem;
+    margin-bottom: 0 !important;
+}
+
+.project p {
+    /* Dimensions */
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    max-width: 20vh;
+
+    /* Font */
+    font-family: 'Dosis';
+}
+
+#contact-article {
+    /* Animation */
+    animation: showarticle 0.5s ease paused forwards;
+    opacity: 0;
+
+    /* Positioning and dimensions */
+    position: absolute;
+    max-width: 1080px;
+    width: 1080px;
+
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#contact-article div {
+    padding: 0.5vh;
+}
+
+#contact-article label {
+    /* Font */
+    font-family: 'Dosis';
+    font-weight: 700;
+}
+
+#about-article {
+    /* Animation */
+    animation: showarticle 0.5s ease paused forwards;
+    opacity: 0;
+
+    /* Positioning and dimensions */
+    position: absolute;
+    max-width: 1080px;
+}
+
+#about-article p {
+    font-family: 'Dosis';
+}
+
+#about-article p ~ p {
+    /* Dimensions */
+    margin-top: 0.5rem
 }
 
 @keyframes showarticle {
@@ -206,10 +287,10 @@ body {
 /* Footer */
 
 footer {
-    /* Positioning */
-    position: absolute;
-    bottom: 1vh;
-    left: 48.5vw;
+    /* Display */
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100px 100px;
 }
 
 footer p {
@@ -218,4 +299,16 @@ footer p {
     font-family: 'Dosis', sans-serif;
     color: hsl(0, 55%, 46%);
     opacity: 0.8;
+
+    /* Positioning */
+    line-height: 100px;
+}
+
+footer img {
+    /* Dimensions */
+    max-width: 50px;
+    
+    /* Positioning */
+    margin-left: 25%;
+    margin-right: 25%;
 }
