@@ -136,7 +136,7 @@ body {
     height: 55vh;
 }
 
-.products-article {
+#products-article {
     /* Animation */
     animation: showarticle 1s ease-out 1s forwards;
     opacity: 0;
@@ -229,7 +229,7 @@ body {
     font-family: 'Dosis';
 }
 
-.contact-article {
+#contact-article {
     /* Animation */
     animation: showarticle 0.5s ease-out paused forwards;
     opacity: 0;
@@ -239,7 +239,7 @@ body {
     max-width: 1080px;
 }
 
-.about-article {
+#about-article {
     /* Animation */
     animation: showarticle 0.5s ease-out paused forwards;
     opacity: 0;
