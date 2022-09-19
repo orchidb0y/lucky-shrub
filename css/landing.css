@@ -245,6 +245,10 @@ body {
     justify-content: center;
 }
 
+#contact-article div {
+    padding: 0.5vh;
+}
+
 #contact-article label {
     /* Font */
     font-family: 'Dosis';
