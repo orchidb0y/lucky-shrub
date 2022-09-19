@@ -54,36 +54,21 @@ body {
     background-color: hsl(42, 100%, 84%);
     max-height: 100vh;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     display: flex;
     flex-direction: column;
 }
 
 /* Logo */
 
-@keyframes shrinkup {
-    from {
-        max-height: 50vh;
-        padding-top: 20vh;
-    }
-
-    to {
-        max-height: 15vh;
-        padding-top: 3vh;
-    }
-}
-
 #top-logo {
     /* Size */
-    max-height: 50vh;
+    max-height: 20vh;
 
     /* Centered */
     display: block;
     margin: 0 auto;
-    padding-top: 20vh;
-
-    /* Animation */
-    animation: shrinkup 1s ease-out 1s forwards;
+    padding-top: 3vh;
 }
 
 /* Navigation menu */
@@ -103,17 +88,15 @@ body {
 
 #nav-menu menu {
     /* Positioning */
-    margin: 5vh 0;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
 
-    column-gap: 5vh;
+    column-gap: 2vh;
     justify-content: center;
 
     /* Menu display */
     display: flex;
     list-style: none;
-
-    /* Animation */
-    animation: slideup 1s ease-out 1s forwards;
 }
 
 .nav-item {
@@ -150,39 +133,82 @@ body {
     overflow: hidden;
     max-width: 1080px;
     margin: 0 auto;
-
-    /* Animation setup */
-    opacity: 0;
-    height: 0vh;
-
-    /* Animation */
-    animation: spaceoutfadein 1s ease-out 2s forwards;
-}
-
-@keyframes spaceoutfadein {
-    from {
-        height: 0vh;
-        opacity: 0;
-    }
-
-    to {
-        height: 55vh;
-        opacity: 1;
-    }
+    height: 55vh;
 }
 
 .products-article {
     /* Animation */
-    animation: showarticle 0.5s ease-out 2s forwards;
+    animation: showarticle 1s ease-out 1s forwards;
     opacity: 0;
 
     /* Positioning and dimensions */
     position: absolute;
     max-width: 1080px;
 
+
+    /* Display */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    gap: 1vh;
+}
+
+#promotion {
+    /* Dimensions */
+    padding: 0.5vh;
+
+    /* Display */
+    display: flex;
+    flex-direction: row;
+}
+
+#promotion img {
+    /* Dimensions */
+    max-width: 10vh;
+}
+
+#text-area {
+    /* Display */
+    display: flex;
+    flex-direction: column;
+}
+
+#text-area p, h1 {
+    /* Dimensions */
+    max-width: 100%;
+    margin-left: 0.5vh;
+}
+
+#portfolio {
+    /* Dimensions */
+    max-width: 100%;
+    
+    /* Flex display */
+    display: flex;
+    justify-content: center;
+    column-gap: 3vh;
+}
+
+.project {
+    border: 1px solid;
+    font-size: 12px;
+}
+
+.project img {
+    /* Dimensions */
+    max-width: 20vh;
+    margin: 2rem;
+    margin-bottom: 0 !important;
+}
+
+.project p {
+    /* Dimensions */
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    max-width: 20vh;
+
+    /* Font */
+    font-family: 'Dosis';
 }
 
 .contact-article {
