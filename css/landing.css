@@ -54,7 +54,7 @@ body {
     background-color: hsl(42, 100%, 84%);
     max-height: 100vh;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -130,7 +130,7 @@ body {
 
 #wrapper {
     /* Dimensions */
-    overflow: hidden;
+    overflow: auto;
     max-width: 1080px;
     margin: 0 auto;
     height: 55vh;
@@ -160,23 +160,41 @@ body {
     /* Display */
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 #promotion img {
     /* Dimensions */
-    max-width: 10vh;
+    max-height: 10vh;
 }
 
 #text-area {
     /* Display */
     display: flex;
     flex-direction: column;
+    vertical-align: middle;
 }
 
 #text-area p, h1 {
     /* Dimensions */
     max-width: 100%;
     margin-left: 0.5vh;
+    vertical-align: middle;
+
+    /* Font */
+    font-family: 'Dosis';
+}
+
+#text-area h1 {
+    /* Font */
+    font-weight: 700;
+    font-size: 3vh;
+    color: red;
+}
+
+#text-area p {
+    /* Font */
+    font-size: 2vh;
 }
 
 #portfolio {
