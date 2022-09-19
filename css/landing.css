@@ -83,7 +83,7 @@ body {
     padding-top: 20vh;
 
     /* Animation */
-    animation: shrinkup 1s ease-out paused forwards;
+    animation: shrinkup 1s ease-out 1s forwards;
 }
 
 /* Navigation menu */
@@ -113,7 +113,7 @@ body {
     list-style: none;
 
     /* Animation */
-    animation: slideup 1s ease-out paused forwards;
+    animation: slideup 1s ease-out 1s forwards;
 }
 
 .nav-item {
@@ -147,63 +147,62 @@ body {
 
 #wrapper {
     /* Dimensions */
-    height: 0vh;
     overflow: hidden;
-    max-width: 75vw;
+    max-width: 1080px;
     margin: 0 auto;
 
     /* Animation setup */
     opacity: 0;
+    height: 0vh;
 
     /* Animation */
-    animation: spaceout 1s ease-out paused forwards, fadein 1s ease-out 1s paused forwards;
+    animation: spaceoutfadein 1s ease-out 2s forwards;
 }
 
-@keyframes spaceout {
+@keyframes spaceoutfadein {
     from {
         height: 0vh;
+        opacity: 0;
     }
 
     to {
         height: 55vh;
-    }
-}
-
-@keyframes fadein {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
         opacity: 1;
     }
 }
 
-.page-article {
-    /* Dimensions and positioning */
-    max-width: 75vw;
-    position: absolute;
-
-    /* Opacity */
+.products-article {
+    /* Animation */
+    animation: showarticle 0.5s ease-out 2s forwards;
     opacity: 0;
 
-    /* Animation */
-    animation: showarticle 0.5s ease-out paused forwards;
+    /* Positioning and dimensions */
+    position: absolute;
+    max-width: 1080px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 }
 
-#products-article {
+.contact-article {
     /* Animation */
     animation: showarticle 0.5s ease-out paused forwards;
+    opacity: 0;
+
+    /* Positioning and dimensions */
+    position: absolute;
+    max-width: 1080px;
 }
 
-#concact-article {
+.about-article {
     /* Animation */
     animation: showarticle 0.5s ease-out paused forwards;
-}
+    opacity: 0;
 
-#about-article {
-    /* Animation */
-    animation: showarticle 0.5s ease-out paused forwards;
+    /* Positioning and dimensions */
+    position: absolute;
+    max-width: 1080px;
 }
 
 @keyframes showarticle {
