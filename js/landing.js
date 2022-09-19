@@ -4,8 +4,8 @@ const memory = {
     productsAnimation: document.getElementById('products-article').getAnimations()[0],
     contactAnimation: document.getElementById('contact-article').getAnimations()[0],
     aboutAnimation: document.getElementById('about-article').getAnimations()[0]
-
 }
+
 
 // Helper functions
 function originDestination(anchor) {
@@ -47,6 +47,30 @@ function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time))
 }
 
+function removeArticle(articles, destination) {
+
+    for (const article of articles) {
+
+    }
+
+}
+
+function changeZ(origin, destination) {
+    
+    const otherArticles = document.getElementsByClassName('page-article')
+    const destArticle = otherArticles.namedItem(destination + '-article')
+
+    destArticle.style.zIndex = 9999
+
+    for (const article of otherArticles) {
+        if (article.id != destination + '-article') {
+            article.style.zIndex = -9999
+        }
+    }
+
+}
+
+
 // Animation function
 const anchors = document.querySelectorAll('.nav-item a')
 anchors.forEach(anchor => {
@@ -58,6 +82,8 @@ anchors.forEach(anchor => {
         if (!(animate)) {
             return
         } else {
+
+            changeZ(origin, destination)
 
             // Get and play current article's animation
             console.log('Getting outAnimation from', origin + '-article')
