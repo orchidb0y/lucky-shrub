@@ -286,8 +286,8 @@ body {
 
 #about-article p {
     /* Font */
-    font-family: 'Dosis';
-    text-justify: distribute;
+    font-family: 'Roboto';
+    text-align: justify;
 
     /* Dimensions */
     margin-left: 1rem;
