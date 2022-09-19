@@ -138,7 +138,7 @@ body {
 
 #products-article {
     /* Animation */
-    animation: showarticle 1s ease-out 1s forwards;
+    animation: showarticle 1s ease forwards;
     opacity: 0;
 
     /* Positioning and dimensions */
@@ -231,7 +231,29 @@ body {
 
 #contact-article {
     /* Animation */
-    animation: showarticle 0.5s ease-out paused forwards;
+    animation: showarticle 0.5s ease paused forwards;
+    opacity: 0;
+
+    /* Positioning and dimensions */
+    position: absolute;
+    max-width: 1080px;
+    width: 1080px;
+
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#contact-article label {
+    /* Font */
+    font-family: 'Dosis';
+    font-weight: 700;
+}
+
+#about-article {
+    /* Animation */
+    animation: showarticle 0.5s ease paused forwards;
     opacity: 0;
 
     /* Positioning and dimensions */
@@ -239,14 +261,13 @@ body {
     max-width: 1080px;
 }
 
-#about-article {
-    /* Animation */
-    animation: showarticle 0.5s ease-out paused forwards;
-    opacity: 0;
+#about-article p {
+    font-family: 'Dosis';
+}
 
-    /* Positioning and dimensions */
-    position: absolute;
-    max-width: 1080px;
+#about-article p ~ p {
+    /* Dimensions */
+    margin-top: 0.5rem
 }
 
 @keyframes showarticle {
