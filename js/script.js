@@ -47,15 +47,7 @@ function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time))
 }
 
-function removeArticle(articles, destination) {
-
-    for (const article of articles) {
-
-    }
-
-}
-
-function changeZ(origin, destination) {
+function changeZ(destination) {
     
     const otherArticles = document.getElementsByClassName('page-article')
     const destArticle = otherArticles.namedItem(destination + '-article')
@@ -77,29 +69,23 @@ anchors.forEach(anchor => {
     anchor.addEventListener('click', () => {
 
         let [origin, destination, animate] = originDestination(anchor)
-        console.log(origin, destination, animate)
 
         if (!(animate)) {
             return
         } else {
 
-            changeZ(origin, destination)
+            changeZ(destination)
 
             // Get and play current article's animation
-            console.log('Getting outAnimation from', origin + '-article')
             let outAnimation = getAnimation(origin)
-            console.log('Got', outAnimation)
             playAnimation(outAnimation)
 
             // Get and play new article's animation
-            console.log('Getting inAnimation from', destination + '-article')
             let inAnimation = getAnimation(destination)
-            console.log('Got', inAnimation)
             delay(1000).then(() => playAnimation(inAnimation))
 
         }
 
-        console.log('')
 
     })
 })
