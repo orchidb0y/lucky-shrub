@@ -125,12 +125,13 @@ body {
 
 /* Main content */
 
-#wrapper {
+main {
     /* Dimensions */
     overflow: auto;
     max-width: 1080px;
     margin: 0 auto;
     height: 55vh;
+    width: 100vw;
     justify-content: center;
 }
 
