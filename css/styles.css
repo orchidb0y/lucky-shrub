@@ -248,12 +248,16 @@ body {
 
 .project p {
     /* Dimensions */
+    
     margin-left: 2rem;
     margin-bottom: 1rem;
     max-width: 20vh;
 
     /* Font */
     font-family: 'Dosis';
+
+    /* Positioning */
+    text-align: center;
 }
 
 #contact-article {
