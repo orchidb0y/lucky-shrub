@@ -69,20 +69,6 @@ body {
 }
 
 /* Navigation menu */
-
-@keyframes slideup {
-    from {
-        margin: 5vh 0;
-        column-gap: 5vh;
-    }
-
-    to {
-        margin-top: 3vh;
-        margin-bottom: 2vh;
-        column-gap: 2vh;
-    }
-}
-
 #nav-menu menu {
     /* Positioning */
     margin-top: 3vh;
