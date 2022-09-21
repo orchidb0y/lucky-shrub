@@ -310,7 +310,7 @@ main {
     }
 }
 
-@-webkit-keyframes webkit-showarticle {
+@keyframes webkit-showarticle {
     from {
         opacity: 0;
     }
