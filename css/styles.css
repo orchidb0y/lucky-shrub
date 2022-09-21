@@ -136,7 +136,7 @@ body {
 
 #products-article {
     /* Animation */
-    animation: showarticle 1s ease forwards;
+    animation: showarticle 0.5s ease forwards;
     opacity: 0;
 
     /* Positioning and dimensions */

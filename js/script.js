@@ -82,7 +82,7 @@ anchors.forEach(anchor => {
 
             // Get and play new article's animation
             let inAnimation = getAnimation(destination)
-            delay(1000).then(() => playAnimation(inAnimation))
+            delay(500).then(() => playAnimation(inAnimation))
 
         }
 
