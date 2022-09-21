@@ -123,8 +123,8 @@ main {
 
 #products-article {
     /* Animation */
-    animation: showarticle 0.5s ease forwards;
-    opacity: 0;
+    animation: showarticle 0.5s ease paused forwards;
+    -webkit-animation: webkit-showarticle 0.5s ease paused forwards;
 
     /* Positioning and dimensions */
     position: absolute;
@@ -250,6 +250,7 @@ main {
 #contact-article {
     /* Animation */
     animation: showarticle 0.5s ease paused forwards;
+    -webkit-animation: webkit-showarticle 0.5s ease paused forwards;
     opacity: 0;
 
     /* Positioning and dimensions */
@@ -276,6 +277,7 @@ main {
 #about-article {
     /* Animation */
     animation: showarticle 0.5s ease paused forwards;
+    -webkit-animation: webkit-showarticle 0.5s ease paused forwards;
     opacity: 0;
 
     /* Positioning and dimensions */
@@ -299,6 +301,16 @@ main {
 }
 
 @keyframes showarticle {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes webkit-showarticle {
     from {
         opacity: 0;
     }
