@@ -77,12 +77,10 @@ anchors.forEach(anchor => {
             changeZ(destination)
 
             // Get and play current article's animation
-            let outAnimation = getAnimation(origin)
-            playAnimation(outAnimation)
+            playAnimation(getAnimation(origin))
 
             // Get and play new article's animation
-            let inAnimation = getAnimation(destination)
-            delay(500).then(() => playAnimation(inAnimation))
+            delay(500).then(() => playAnimation(getAnimation(destination)))
 
         }
 
